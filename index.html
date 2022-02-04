@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!--style-->
+    <link rel="stylesheet" href="css/style.css">
+    <title>pop-up</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="main">
+                <div class="main__body">
+                    <div class="main__content">
+                        <button type="button" class="main__button button-popup">Кликни</button>                 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--popup-->
+    <div class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <div class="popup__close">
+                    <div class="popup__close-line"></div>
+                </div>
+                <form action="#" method="post" class="popup__form form">
+                    <div class="form__title">Рады видеть вас вновь!
+                       <span>Давайте будем на связи?</span></div>
+                    <div class="form__text">Оставьте телефон - не пропускайте распродажи и раньше всех узнавайте о выходе
+                        новых
+                        коллекций
+                    </div>
+                    <input class="form__phone" type="tel" name="form__phone" id="form__phone" placeholder="+7 (___) ___-__-__" pattern="[0-9]" required tabindex="0">
+                    <button type="button" class="form__button button-popup">оставаться на связи</button>
+                </form>
+                <div class="popup__picture">
+                    <div class="popup__picture-img"></div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    <!--script-->
+    <script src="script.js"></script>
+</body>
+</html>

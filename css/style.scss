@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+//---------------------------- fonts -----------
+@font-face {
+    font-family: 'Proxima Nova Regular';
+    src: url('../fonts/ProximaNova-Regular.eot');
+    src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ProximaNova-Regular.woff') format('woff'),
+        url('../fonts/ProximaNova-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+html,
+body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.main {
+
+    &__body {
+        width: 100%;
+    }
+
+    &__content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 50px 0;
+    }
+    &__button:hover {
+        background: #383737;
+        transition: 300ms ease 0s;
+    }
+    &__button:active {
+        background: #FFFFFF;
+        color: #000000;
+    }
+
+}
+
+.button-popup {
+   font-family: 'Proxima Nova Regular';
+   font-size: 18px;
+   line-height: 24px;
+   text-transform: uppercase;
+   color: #FFFFFF;
+   width: 320px;
+   height: 64.34px;
+   background: #000000;
+   cursor: pointer;
+}
+
+.popup {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 30, 30, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease 0s;
+    &.open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__body {
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__content {
+        width: 777px;
+        height: 482px;
+        position: relative;
+        transition: all 0.5s ease 0s;
+        opacity: 0;
+        transform: translate(0px, -100%);
+        &.open {
+            opacity: 1;
+            transform: translate(0px, 0px);
+        }
+    }
+
+    &__form {
+        background-color: #FFFFFF;
+        color: #000000;
+        max-width: 682px;
+        height: 100%;
+        float: right;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-content: center;
+        padding: 70px 57px 87px 276px;
+    }
+
+    &__close {
+        color: #ABABAB;
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        top: 23px;
+        right: 25px;
+        cursor: pointer;
+    }
+    &__close-line {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            width: 25.46px;
+            height: 2px;
+            border-radius: 2px;
+            background-color: #ABABAB;
+            top: 47%;
+            left: -4px;
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+        &::before {
+            transform: rotate(45deg);
+        }
+
+    }
+
+    &__picture {
+        position: absolute;
+        left: 0;
+        transform: translate(0px, -50%);
+        top: 50%;
+        width: 329px;
+        height: 403px;
+      
+    }
+    &__picture-img {
+         width: 100%;
+         height: 100%;
+        background-color: rgb(216, 216, 209);
+        background-image: url('../img/image.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;      
+    }
+}
+
+.form {
+    
+
+    &__title {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 29px;
+        line-height: 31px;
+        color: #000000;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__text {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 23px;
+        color: #000000;
+        padding: 11px 0 43px 0;
+        &._other {
+            padding: 13px 0 0 0;
+        }
+    }
+    &__phone {
+        width: 320px;
+        height: 64.34px;
+        text-align: center;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 24px;
+        color: #5B5B5B;
+        background: transparent;
+        border: 1px solid #C2C0BB;
+        &._focus {
+            //border: 2px solid #fcb502;
+            outline: 2px solid #fcb502;
+        }
+        &._blur {
+            //border: 2px solid #fc0202;
+            outline: 2px solid #fc0202;
+        }
+        &._correct {
+            //border: 2px solid #048a0b;
+            outline: 2px solid #048a0b;
+        }
+        &._hidden {
+            display: none;
+        }
+    }
+
+    &__button {
+        margin-top: 17.32px;
+        &:hover {
+            background-color: #383737;
+            transition: 300ms ease 0s;            
+        }
+        &._hidden{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 780px) {
+    .container {
+        max-width: 760px;
+    }
+    .popup {
+
+
+        &__content {
+            width: 420px;
+            height: 607px;
+            position: relative;
+            display: flex;
+            align-items: end;
+        }
+
+        &__form {
+            background-color: #FFFFFF;
+            color: #000000;
+            max-width: 100%;
+            height: 544px;
+            padding: 183px 50px 62px 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+        }
+
+
+        &__picture {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0px);
+            top: 0px;
+            width: 303px;
+            height: 219px; 
+         }
+
+        &__picture-img {    
+            background-image: url('../img/image_mobile.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+        &__close {
+            top: 80px;
+            right: 18px;
+        }
+
+    }
+
+    .form {
+
+
+        &__title {
+            font-size: 25px;
+            line-height: 25px;
+            text-align: center;
+        }
+
+        &__text {
+            font-size: 16px;
+            line-height: 21px;
+            padding: 11px 0 24px 0;
+            text-align: center;
+            &._other {
+                padding: 8px 0 0 0;
+            }
+        }
+
+        &__phone {
+            width: 100%;
+            height: 64.34px;
+        }
+
+        &__button {
+            margin-top: 17.32px;
+        }
+    }
+}
