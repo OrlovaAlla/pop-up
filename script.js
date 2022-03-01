@@ -97,25 +97,22 @@ document.addEventListener('DOMContentLoaded', function(){
                 form__phone.classList.add('_blur');
                 form__phone.classList.remove('_focus');
                 form__phone.classList.remove('_correct');
-                console.log('blur ' + this.value.length);                
-                console.log('val.length ' + val.length);                
+                              
               }
             } else {   
               
-              if (this.value.length < 18){
-               
+              if (this.value.length < 18){               
                 form__phone.classList.add('_focus');
                 form__phone.classList.remove('_blur'); 
                 form__phone.classList.remove('_correct');
-                console.log('focus ' + this.value.length);
+                
 
               } else if (this.value.length == 18){
                 
                 form__phone.classList.add('_correct');
                 form__phone.classList.remove('_focus');
                 form__phone.classList.remove('_blur'); 
-                console.log('correct ' + this.value.length);
-                console.log('val.length ' + val.length); 
+                
               } 
               setCursorPosition(this.value.length, this);
               

@@ -69,7 +69,7 @@ body {
 .popup {
 
     position: fixed;
-    top: 0;
+    top: -100%;
     left: 0;
     width: 100%;
     height: 100%;
@@ -80,6 +80,7 @@ body {
     &.open {
         opacity: 1;
         visibility: visible;
+        top: 0;
     }
 
     &__body {
@@ -209,16 +210,19 @@ body {
         background: transparent;
         border: 1px solid #C2C0BB;
         &._focus {
-            //border: 2px solid #fcb502;
-            outline: 2px solid #fcb502;
+            border: 2px solid #fcb502;
+            //outline: 2px solid #fcb502;
+            outline: none;
         }
         &._blur {
-            //border: 2px solid #fc0202;
-            outline: 2px solid #fc0202;
+            border: 2px solid #fc0202;
+            //outline: 2px solid #fc0202;
+            outline: none;
         }
         &._correct {
-            //border: 2px solid #048a0b;
-            outline: 2px solid #048a0b;
+            border: 2px solid #048a0b;
+            //outline: 2px solid #048a0b;
+            outline: none;
         }
         &._hidden {
             display: none;

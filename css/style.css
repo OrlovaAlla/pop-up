@@ -70,7 +70,7 @@ body {
 
 .popup {
   position: fixed;
-  top: 0;
+  top: -100%;
   left: 0;
   width: 100%;
   height: 100%;
@@ -84,6 +84,7 @@ body {
 .popup.open {
   opacity: 1;
   visibility: visible;
+  top: 0;
 }
 
 .popup__body {
@@ -235,15 +236,18 @@ body {
 }
 
 .form__phone._focus {
-  outline: 2px solid #fcb502;
+  border: 2px solid #fcb502;
+  outline: none;
 }
 
 .form__phone._blur {
-  outline: 2px solid #fc0202;
+  border: 2px solid #fc0202;
+  outline: none;
 }
 
 .form__phone._correct {
-  outline: 2px solid #048a0b;
+  border: 2px solid #048a0b;
+  outline: none;
 }
 
 .form__phone._hidden {
