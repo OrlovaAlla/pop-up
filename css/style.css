@@ -69,6 +69,7 @@ body {
 }
 
 .popup {
+  display: none;
   position: fixed;
   top: -100%;
   left: 0;
@@ -143,6 +144,7 @@ body {
   position: absolute;
   top: 23px;
   right: 25px;
+  z-index: 3;
   cursor: pointer;
 }
 
@@ -193,6 +195,19 @@ body {
   background-size: contain;
 }
 
+.form__div-02.form__text {
+  padding: 13px 0 0 0;
+}
+
+.form .div-visible {
+  display: block;
+  width: 100%;
+}
+
+.form .div-hidden {
+  display: none;
+}
+
 .form__title {
   font-family: Roboto;
   font-style: normal;
@@ -215,10 +230,6 @@ body {
   line-height: 23px;
   color: #000000;
   padding: 11px 0 43px 0;
-}
-
-.form__text._other {
-  padding: 13px 0 0 0;
 }
 
 .form__phone {
@@ -319,9 +330,15 @@ body {
     top: 80px;
     right: 18px;
   }
+  .form__div-02.form__text {
+    padding: 8px 0 0 0;
+  }
   .form__title {
     font-size: 25px;
     line-height: 25px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-align: center;
   }
   .form__text {
@@ -330,14 +347,58 @@ body {
     padding: 11px 0 24px 0;
     text-align: center;
   }
-  .form__text._other {
-    padding: 8px 0 0 0;
+  .form__phone {
+    width: 100%;
+    height: 64.34px;
+  }
+  .form__button {
+    margin-top: 17.32px;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    max-width: 400px;
+  }
+  .popup__content {
+    width: 100%;
+    height: auto;
+  }
+  .popup__form {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    min-height: 544px;
+    padding: 239px 20px 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .popup__picture {
+    width: 100%;
+    height: 219px;
+  }
+  .popup__picture-img {
+    background-position: center;
+    background-size: cover;
+  }
+  .popup__close {
+    top: 20px;
+    right: 18px;
   }
   .form__phone {
     width: 100%;
     height: 64.34px;
   }
   .form__button {
+    width: 100%;
     margin-top: 17.32px;
   }
 }
