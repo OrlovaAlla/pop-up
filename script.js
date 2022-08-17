@@ -41,12 +41,12 @@
     form__phone.classList.remove('_blur');
     popup__form.reset();
     setTimeout(timeOutNone, 500)
+        clearTimeout(timerId);
+        console.log("закрыл pop-up");
   };
 
   popup__close.addEventListener("click", function () {
     popupClose();
-    clearTimeout(timerId);
-    console.log("закрыл pop-up");
   });
 
 
